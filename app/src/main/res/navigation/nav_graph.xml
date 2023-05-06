@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/shoppingFragment3">
+    <fragment
+        android:id="@+id/updateFragment2"
+        android:name="com.example.mvvmkhang.view.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment2_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment3"
+        android:name="com.example.mvvmkhang.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment3_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_detailFragment3_to_updateFragment2"
+            app:destination="@id/updateFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingFragment3"
+        android:name="com.example.mvvmkhang.view.ShoppingFragment"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" >
+        <action
+            android:id="@+id/action_shoppingFragment3_to_signInFragment3"
+            app:destination="@id/signInFragment3" />
+        <action
+            android:id="@+id/action_shoppingFragment3_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment3"
+        android:name="com.example.mvvmkhang.view.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment3_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_signInFragment3_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="com.example.mvvmkhang.view.DialogFragment"
+        android:label="fragment_dialog"
+        tools:layout="@layout/fragment_dialog" >
+        <action
+            android:id="@+id/action_dialogFragment_to_signInFragment3"
+            app:destination="@id/signInFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.mvvmkhang.view.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signupFragment_to_signInFragment3"
+            app:destination="@id/signInFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/upLoadFragment"
+        android:name="com.example.mvvmkhang.view.UpLoadFragment"
+        android:label="fragment_up_load"
+        tools:layout="@layout/fragment_up_load" >
+        <action
+            android:id="@+id/action_upLoadFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.mvvmkhang.view.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_list" >
+    <action
+            android:id="@+id/action_listFragment_to_upLoadFragment2"
+            app:destination="@id/upLoadFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment3"
+            app:destination="@id/detailFragment3" />
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment32"
+            app:destination="@id/detailFragment3" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment2"
+            app:destination="@id/updateFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruct1Fragment"
+        android:name="com.example.mvvmkhang.view.Instruct.Instruct1Fragment"
+        android:label="fragment_instruct1"
+        tools:layout="@layout/fragment_instruct1" >
+        <action
+            android:id="@+id/action_instruct1Fragment_to_instruct2Fragment"
+            app:destination="@id/instruct2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruct2Fragment"
+        android:name="com.example.mvvmkhang.view.Instruct.Instruct2Fragment"
+        android:label="fragment_instruct2"
+        tools:layout="@layout/fragment_instruct2" >
+        <action
+            android:id="@+id/action_instruct2Fragment_to_instruct1Fragment"
+            app:destination="@id/instruct1Fragment" />
+        <action
+            android:id="@+id/action_instruct2Fragment_to_instruct3Fragment"
+            app:destination="@id/instruct3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruct3Fragment"
+        android:name="com.example.mvvmkhang.view.Instruct.Instruct3Fragment"
+        android:label="fragment_instruct3"
+        tools:layout="@layout/fragment_instruct3" >
+        <action
+            android:id="@+id/action_instruct3Fragment_to_instruct2Fragment"
+            app:destination="@id/instruct2Fragment" />
+        <action
+            android:id="@+id/action_instruct3Fragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.mvvmkhang.view.activity.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.mvvmkhang.view.CartshopFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cartshop"/>
+    <fragment
+        android:id="@+id/newFragment"
+        android:name="com.example.mvvmkhang.view.newFragment"
+        android:label="fragment_new"
+        tools:layout="@layout/fragment_new" />
+
+</navigation>
